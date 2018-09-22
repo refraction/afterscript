@@ -33,6 +33,7 @@ async function build() {
 	try {
 		// Clean the previous build
 		await del(outDir);
+		await ensureDir(outDir);
 
 		spinner.text = chalk.magenta.bold('Preparing data...');
 
