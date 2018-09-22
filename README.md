@@ -83,7 +83,7 @@ To get started, install AfterScript from NPM:
 ```bash
 npm install -g afterscript
 # or
-yarn afterscript
+yarn global add afterscript
 ```
 
 Once installed, create a folder and initialize a new project:
