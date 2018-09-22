@@ -1,10 +1,9 @@
 const { join } = require('path');
-const { copy, ensureDir, writeFile, existsSync, readdirSync } = require('fs-extra');
+const { copy, ensureDir, writeFile, existsSync, readdirSync, readJsonSync } = require('fs-extra');
 const del = require('del');
 const chalk = require('chalk');
 const ora = require('ora');
 const rollup = require('rollup');
-const pkg = require('../package.json');
 const { inputConfig, outputConfig } = require('../lib/utils/rollup-config');
 
 const isDev = process.env.NODE_ENV !== 'production';
@@ -18,6 +17,11 @@ const inject = `/*
 
 // Them vars
 const cwd = process.cwd();
+const pkg = readJsonSync(join(cwd, 'package.json'));
+if (!pkg) {
+	console.error(chalk.bgRed.black(' ERROR '), chalk.red.bold('Could not read package.json'));
+	process.exit(1);
+}
 const scriptName = pkg.afterscript && pkg.afterscript.name ? pkg.afterscript.name : 'Script';
 const scriptFileName = scriptName.replace(/(\s|-|_)/g, '');
 const outDir = join(cwd, 'dist');
