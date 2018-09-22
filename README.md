@@ -1,5 +1,5 @@
 <p align="center">
-	<img alt="AfterScript" title="AfterScript" src="./afterscript-logo.svg" width="32Z0">
+	<img alt="AfterScript" title="AfterScript" src="./afterscript-logo.svg" width="240">
 </p>
 <p align="center">Modern developer experience for After Effects scripting</p>
 
