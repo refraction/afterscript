@@ -1,0 +1,65 @@
+{
+  "name": "afterscript",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "afterscript": "node ./bin/afterscript.js",
+    "lint": "zeit-eslint --ext .jsx,.js ."
+  },
+  "bin": "bin/afterscript.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "7",
+    "babel-plugin-auto-import": "^0.7.1",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-extendscript": "^0.3.0",
+    "chalk": "^2.4.1",
+    "command-exists": "^1.2.7",
+    "commander": "^2.18.0",
+    "core-js": "^2.5.7",
+    "del": "^3.0.0",
+    "fbjs": "^1.0.0",
+    "fs-extra": "^7.0.0",
+    "ora": "^3.0.0",
+    "rollup": "^0.66.0",
+    "rollup-plugin-babel": "3",
+    "rollup-plugin-babel-minify": "^6.0.0",
+    "rollup-plugin-commonjs": "^9.1.8",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-replace": "^2.0.0",
+    "rollup-pluginutils": "^2.3.3",
+    "webpack": "^4.19.1"
+  },
+  "devDependencies": {
+    "@fivepointseven/eslint-config": "^1.0.2",
+    "@zeit/eslint-config-node": "^0.3.0",
+    "babel-eslint": "^9.0.0",
+    "eslint": "^5.6.0",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "webpack-cli": "^3.1.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@fivepointseven/eslint-config"
+    ],
+    "parser": "babel-eslint",
+    "globals": {
+      "$": true
+    },
+    "plugins": [
+      "flowtype"
+    ],
+    "settings": {
+      "flowtype": {
+        "onlyFilesWithFlowAnnotation": true
+      }
+    }
+  }
+}

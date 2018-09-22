@@ -1,0 +1,20 @@
+{
+  "name": "afterscript-starter",
+  "version": "1.0.0",
+  "description": "AfterScript starter template",
+  "main": "index.js",
+  "afterscript": {
+    "name": "AfterScript Starter"
+  },
+  "scripts": {
+    "dev": "afterscript watch",
+    "build": "afterscript build",
+    "build-production": "NODE_ENV=production afterscript build"
+  },
+  "keywords": ["after effects", "afterscript"],
+  "author": "Max Rovensky <hey@fivepointseven.com> https://fivepointseven.com",
+  "license": "ISC",
+  "dependencies": {
+    "afterscript": "latest"
+  }
+}
